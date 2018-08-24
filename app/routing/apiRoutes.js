@@ -11,8 +11,30 @@ module.exports = function(app) {
 
   // API POST /friends route request that will take the incoming results from survey and handle logic of compatibility
   app.post("/api/friends", function(req, res) {
+
+    
   
-    // Logic will go here
+    var newPerson = {
+      name: req.body.name,
+      photo: req.body.photo,
+      scores: []
+    };
+
+    var newPersonScore = [];
+    // console.log(req.body.scores);
+    
+
+    for(var i=0;i<req.body.scores.length;i++){
+
+      newPersonScore.push(parseInt(req.body.scores[i]));      
+    }
+
+    newPerson.scores = newPersonScore;
+
+    console.log(newPerson);
+
+    res.json(newPerson);
 
   });
+
 };
