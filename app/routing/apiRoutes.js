@@ -36,12 +36,12 @@ module.exports = function (app) {
 
     var scoreDifference = 100;
 
-    for (var i = 0; i < friendsData; i++) {
+    for (var i = 0; i < friendsData.length; i++) {
 
       var eachDifference = 0;
 
-      for (var j = 0; j < newPersonScore; j++) {
-          eachDifference += math.abs(friendsData[i].scores[j] - newPersonScore[j])
+      for (var j = 0; j < newPersonScore.length; j++) {
+          eachDifference += Math.abs(friendsData[i].scores[j] - newPersonScore[j])
       }
 
       if (eachDifference < scoreDifference){
@@ -57,7 +57,7 @@ module.exports = function (app) {
     console.log(bestMatch);
 
 
-    res.json(newPerson);
+    res.json(bestMatch);
 
     friendsData.push(newPerson);
 
