@@ -34,20 +34,32 @@ module.exports = function (app) {
       scores: []
     };
 
+    var scoreDifference = 100;
+
     for (var i = 0; i < friendsData; i++) {
 
-      var scoreDifference = 0;
+      var eachDifference = 0;
 
       for (var j = 0; j < newPersonScore; j++) {
-          // Calc absolute value diffrence and store in scoreDifference
+          eachDifference += math.abs(friendsData[i].scores[j] - newPersonScore[j])
+      }
 
+      if (eachDifference < scoreDifference){
+          bestMatch.name = friendsData[i].name;
+          bestMatch.photo = friendsData[i].photo
+          scoreDifference = eachDifference;
       }
 
     }
-
+    console.log(friendsData);
+    
     console.log(newPerson);
+    console.log(bestMatch);
+
 
     res.json(newPerson);
+
+    friendsData.push(newPerson);
 
   });
 
