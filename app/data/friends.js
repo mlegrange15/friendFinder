@@ -1,7 +1,7 @@
 // Array that holds all of the friends data. Each completed survey will create a new friend and object in this array
 var friendsData = [
     {
-        name: "Ahmed",
+        name: "Lebron James",
         photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
         scores: [
             5,
@@ -17,7 +17,7 @@ var friendsData = [
         ]
     },
     {
-        name: "Bahmed",
+        name: "Michael Scott",
         photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
         scores: [
             4,
@@ -33,7 +33,7 @@ var friendsData = [
         ]
     },
     {
-        name: "Cahmed",
+        name: "Batman",
         photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
         scores: [
             1,
